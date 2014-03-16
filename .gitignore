@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+.DS_Store
+=======
+/vendor
+/Config/Dev
+/Logs
+BUILD_ID
+ENVIRONMENT
+composer.lock
+.DS_Store
+Public/assets/css/main.css
+>>>>>>> 39abd8bb5bfe6e33c59b62cb4a9071826a625bbd

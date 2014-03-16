@@ -1,0 +1,79 @@
+@font-face {
+   font-family: code;
+   src: url('../fonts/code.woff'); 
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: url('../images/flying_southwest.jpg') no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    font-family: Helvetica;
+    font-size: 1rem;
+    text-align: center;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+
+#header {
+    background: transparent;
+    color: #FFF;
+    font-family: code;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 7% 0 20px 0;
+}
+
+#content {
+    background: transparent;
+    color: #FFF;
+}
+
+#nav {
+    background: #FFF;
+    color: #000;
+    padding: 20px 0;
+    opacity: .2;
+}
+
+#nav * {
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    display: inline;
+    list-style: none;
+}
+
+#nav li a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+}
+
+#nav li a:hover {
+    text-decoration: underline;
+}
+
+#imgDesc {
+    color: #CCC;
+    text-align: right;
+    font-size: .75rem;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
