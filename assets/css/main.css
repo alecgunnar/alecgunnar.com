@@ -30,7 +30,6 @@ header {
     color: #FFF;
     font-family: code;
     font-size: 3rem;
-    font-weight: bold;
     margin: 7% 0 20px 0;
 }
 
@@ -53,7 +52,6 @@ nav li {
 
 nav li a {
     color: #000;
-    font-weight: bold;
     text-decoration: none;
     padding: 20px;
 }
@@ -89,5 +87,20 @@ footer {
         font-size: 1.5rem;
         text-align: justify;
         padding: 20px 30px;
+    }
+}
+
+@media (max-width: 980px) and (orientation: landscape) {
+    nav {
+        font-size: 1.5rem;
+        opacity: .4;
+    }
+    
+    nav li {
+        display: inline;
+    }
+    
+    footer {
+        font-size: 1rem;
     }
 }
