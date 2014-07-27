@@ -62,7 +62,7 @@ nav li a:hover {
     text-decoration: underline;
 }
 
-#imgDesc {
+footer {
     background: #000;
     color: #FFF;
     font-size: .75rem;
@@ -74,13 +74,20 @@ nav li a:hover {
     opacity: .75;
 }
 
-@media only screen and (max-width : 320px) {
+@media (max-width: 980px) {
     header {
-        font-size: 2rem;
+        font-size: 5rem;
     }
     
     nav li {
+        font-size: 2rem;
         display: block;
         padding: 20px;
+    }
+    
+    footer {
+        font-size: 1.5rem;
+        text-align: justify;
+        padding: 20px 30px;
     }
 }
