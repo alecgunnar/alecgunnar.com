@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background: url('../images/flying_southwest.jpg') no-repeat;
+    background: url('../images/cota_down_pit_road.jpg') no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -25,7 +25,7 @@ body {
     margin: 0 auto;
 }
 
-#header {
+header {
     background: transparent;
     color: #FFF;
     font-family: code;
@@ -34,46 +34,53 @@ body {
     margin: 7% 0 20px 0;
 }
 
-#content {
-    background: transparent;
-    color: #FFF;
-}
-
-#nav {
+nav {
     background: #FFF;
     color: #000;
     padding: 20px 0;
     opacity: .3;
 }
 
-#nav * {
+nav * {
     margin: 0;
     padding: 0;
 }
 
-#nav li {
+nav li {
     display: inline;
     list-style: none;
 }
 
-#nav li a {
+nav li a {
     color: #000;
     font-weight: bold;
     text-decoration: none;
     padding: 20px;
 }
 
-#nav li a:hover {
+nav li a:hover {
     text-decoration: underline;
 }
 
 #imgDesc {
-    color: #CCC;
-    text-align: right;
+    background: #000;
+    color: #FFF;
     font-size: .75rem;
     padding: 10px;
     box-sizing: border-box;
     position: absolute;
     width: 100%;
     bottom: 0;
+    opacity: .75;
+}
+
+@media (max-width : 960px) {
+    header {
+        font-size: 2rem;
+    }
+    
+    nav li {
+        display: block;
+        padding: 20px;
+    }
 }
