@@ -1,0 +1,11 @@
+{
+    "require": {
+        "maverick/maverick": "0.*",
+        "twig/twig": "1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Me": "src"
+        }
+    }
+}
