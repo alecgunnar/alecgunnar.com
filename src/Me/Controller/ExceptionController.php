@@ -10,20 +10,15 @@ use Twig_Environment,
 class ExceptionController extends EC {
     protected $twig;
 
-    public function __construct(Twig_Environment $twig, Response $response ) {
-        $this->twig     = $twig;
-        $this->response = $response;
+    public function __construct(Twig_Environment $twig) {
+        $this->twig = $twig;
     }
 
-    public function showErrorAction(Exception $e) {
-        $code = 500;
+    public function error500Action(Exception $e) {
+        return $this->twig->render('errors/500.twig');
+    }
 
-        if(get_class($e) == 'Maverick\Exception\NoRouteException') {
-            $code = 404;
-        }
-
-        $this->response->setStatus($code);
-
-        return $this->twig->render('error.twig', ['code' => $code]);
+    public function error404Action(Exception $e) {
+        return $this->twig->render('errors/404.twig');
     }
 }

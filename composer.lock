@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "maverick/maverick",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gunnar94/Maverick.git",
-                "reference": "67efd96117757017d7d289e457c7052e6114a3be"
+                "reference": "8a5a8a52f6ed0706003a364557b638f780088096"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gunnar94/Maverick/zipball/67efd96117757017d7d289e457c7052e6114a3be",
-                "reference": "67efd96117757017d7d289e457c7052e6114a3be",
+                "url": "https://api.github.com/repos/gunnar94/Maverick/zipball/8a5a8a52f6ed0706003a364557b638f780088096",
+                "reference": "8a5a8a52f6ed0706003a364557b638f780088096",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 }
             ],
             "description": "A micro framework for PHP",
-            "time": "2014-08-18 21:29:03"
+            "time": "2014-08-19 18:20:25"
         },
         {
             "name": "twig/twig",

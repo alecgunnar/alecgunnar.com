@@ -16,7 +16,7 @@ $app->services->register('default.controller', function($mgr) {
 });
 
 $app->services->replace('exception.controller', function($mgr) {
-    return new Me\Controller\ExceptionController($mgr->get('twig'), $mgr->get('response'));
+    return new Me\Controller\ExceptionController($mgr->get('twig'));
 });
 
 $app->router->match('*', '/', function() use($app) {
