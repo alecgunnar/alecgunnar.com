@@ -7,7 +7,7 @@ require ROOT . 'vendor/autoload.php';
 $app = new Maverick\Application();
 
 $app->services->register('twig', function() {
-    $loader = new Twig_Loader_Filesystem(ROOT . 'src/Me/Views/');
+    $loader = new Twig_Loader_Filesystem(ROOT . 'src/Me/views/');
     return new Twig_Environment($loader);
 });
 
