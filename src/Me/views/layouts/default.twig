@@ -3,18 +3,32 @@
   <head>
     <title>{% block title %}Alec Carpenter{% endblock %}</title>
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/lightbox.css">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/assets/js/jquery.lightbox.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body class="container">
-    <header>Alec Carpenter</header>
-    <nav>
-      <ul>
-        <li><a href="/">about</a>
-        <li><a href="https://www.github.com/gunnar94">projects</a>
-        <li><a href="mailto:gunnar94@me.com">contact</a>
-      </ul>
-    </nav>
-    <main>
-      {% block content %}{% endblock %}
-    </main>
+  <body id="{% block pageid %}{% endblock %}">
+    <div class="container">
+      <header>
+        <div class="name">
+          <img src="/assets/images/me/ql_400_2014.jpg" class="img-circle" />
+          Alec Carpenter
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/">about</a>
+            <li><a href="https://www.github.com/gunnar94">projects</a>
+            <li><a href="mailto:gunnar94@me.com">contact</a>
+          </ul>
+        </nav>
+        <div style="clear:both;"></div>
+      </header>
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+      <footer>Designed and built with <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> and <a href="https://github.com/gunnar94/maverick" target="_blank">Maverick</a>.</footer>
+    </div>
+    <script>$.lightbox();</script>
   </body>
 </html>
