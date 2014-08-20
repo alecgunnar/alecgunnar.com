@@ -51,8 +51,8 @@ img[lightbox="true"] {
 }
 
 #lightbox-container #lightbox-footer {
-    opacity: .8;
     color: #FFF;
+    text-shadow: 0px 0px 3px #000;
     max-height: 75px;
     overflow: hidden;
     padding: 20px;
@@ -60,6 +60,7 @@ img[lightbox="true"] {
     bottom: 50px;
     left: 0;
     right: 0;
+    display: none;
 }
 
 #lightbox-container #lightbox-footer a {
@@ -81,5 +82,12 @@ img[lightbox="true"] {
     #lightbox-container #lightbox-header #lightbox-close {
         background-image: url('/assets/images/lightbox/close-retina.png');
         background-size: 40px 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    #lightbox-container #lightbox-footer {
+        background: #333;
+        bottom: 0;
     }
 }
