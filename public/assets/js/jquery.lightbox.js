@@ -103,7 +103,7 @@
                 $('#lightbox-caption').html(caption);
             }
 
-            $('#lightbox-caption').show();
+            $('#lightbox-footer').show();
         },
         positionImage: function () {
             var $container, available, $img, width, height, diff;
