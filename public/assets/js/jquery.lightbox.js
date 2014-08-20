@@ -78,7 +78,7 @@
             caption = $img.attr(config.attr.caption);
 
             if(caption.length > config.caption.length && methods.isMobile()) {
-                $original = $('<div id="lightbox-caption-expanded">' + caption + ' (<a id="lightbox-caption-collapse">' + config.caption.less + '</a>)</div>');
+                $original = $('<div id="lightbox-caption-expanded">' + caption + '<br /><br /><a id="lightbox-caption-collapse">' + config.caption.less + '</a></div>');
                 $caption  = $('<div id="lightbox-caption-collapsed">' + caption.substr(0, config.caption.length) + ' (<a id="lightbox-caption-expand">' + config.caption.more + '</a>)</div>');
 
                 $original.hide();
