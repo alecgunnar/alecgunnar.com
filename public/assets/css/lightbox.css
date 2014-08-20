@@ -1,3 +1,7 @@
+img[lightbox="true"] {
+    cursor: pointer;
+}
+
 #lightbox-container {
     background: #252525;
     position: fixed;
@@ -47,16 +51,26 @@
 }
 
 #lightbox-container #lightbox-footer {
-    background: #333;
     opacity: .8;
     color: #FFF;
-    max-height: 100px;
-    overflow: scroll;
+    max-height: 75px;
+    overflow: hidden;
     padding: 20px;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     right: 0;
+}
+
+#lightbox-container #lightbox-footer a {
+    color: #FFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#lightbox-container #lightbox-footer.expanded {
+    max-height: none;
+    position: static;
 }
 
 /*

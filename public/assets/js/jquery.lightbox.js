@@ -21,6 +21,11 @@
         },
         metrics: {
             callback: null
+        },
+        caption: {
+            length: 60,
+            more:   'Show More',
+            less:   'Show Less'
         }
     }, methods = {};
 
@@ -36,9 +41,7 @@
              */
             $('#lightbox-container img').attr('src', $img.attr('src'));
 
-            if(typeof $img.attr(config.attr.caption) == 'string') {
-                $('#lightbox-container #lightbox-caption').html($img.attr(config.attr.caption));
-            }
+            methods.setCaption($img);
 
             /*
              * Show the lightbox
@@ -59,32 +62,54 @@
             }
         },
         init: function () {
-            if(!$('#lightbox-container').length) {
-                $('body').append('<div id="lightbox-container"><div id="lightbox-header"><div id="lightbox-close">Close</div></div><div id="lightbox-navigation"><div id="lightbox-previous">Previous</div><div id="lightbox-next">Next</div></div><div id="lightbox-main"><img></div><div id="lightbox-footer"><div id="lightbox-caption"></div></div></div>');
+            $('body').append('<div id="lightbox-container"><div id="lightbox-header"><div id="lightbox-close">Close</div></div><div id="lightbox-navigation"><div id="lightbox-previous">Previous</div><div id="lightbox-next">Next</div></div><div id="lightbox-main"><img></div><div id="lightbox-footer"><div id="lightbox-caption"></div></div></div>');
 
-                $('#lightbox-container #lightbox-close').on('click', methods.handleClose);
-                $('#lightbox-container #lightbox-close').on('tap', methods.handleClose);
+            methods.onClick($('#lightbox-close'), methods.handleClose);
+            methods.onClick($('#lightbox-container img'), methods.toggleCaption);
+        },
+        setCaption: function ($img) {
+            var caption, $caption, $original, expand;
 
-                $('#lightbox-container img').on('click', methods.toggleCaption);
-                $('#lightbox-container img').on('tap', methods.toggleCaption);
+            if(typeof $img.attr(config.attr.caption) != 'string') {
+                $('#lightbox-caption').hide();
+                return;
             }
 
-            $('#lightbox-container #lightbox-footer').show();
-            $('#lightbox-container img').attr('style', '');
-            $('#lightbox-container img').css({
-                position: 'static',
-                display: 'none'
-            });
+            caption = $img.attr(config.attr.caption);
+
+            if(caption.length > config.caption.length && methods.isMobile()) {
+                $original = $('<div id="lightbox-caption-expanded">' + caption + ' (<a id="lightbox-caption-collapse">' + config.caption.less + '</a>)</div>');
+                $caption  = $('<div id="lightbox-caption-collapsed">' + caption.substr(0, config.caption.length) + ' (<a id="lightbox-caption-expand">' + config.caption.more + '</a>)</div>');
+
+                $original.hide();
+
+                $('#lightbox-caption').append($original).append($caption);
+
+                methods.onClick($('#lightbox-caption-expand'), function () {
+                    $('#lightbox-container img').fadeOut(function () {
+                        $('#lightbox-footer').toggleClass('expanded');
+                        $('#lightbox-caption-collapsed').hide();
+                        $('#lightbox-caption-expanded').show();
+                    });
+                });
+
+                methods.onClick($('#lightbox-caption-collapse'), function () {
+                    $('#lightbox-footer').toggleClass('expanded');
+                    $('#lightbox-caption-expanded').hide();
+                    $('#lightbox-caption-collapsed').show();
+                    $('#lightbox-container img').fadeIn();
+                });
+            } else {
+                $('#lightbox-caption').html(caption);
+            }
+
+            $('#lightbox-caption').show();
         },
         positionImage: function () {
-            var $container, header, footer, available, $img, width, height, diff;
+            var $container, available, $img, width, height, diff;
 
             $container = $('#lightbox-container');
-
-            header = $('#lightbox-container #lightbox-header').height();
-            footer = $('#lightbox-container #lightbox-footer').height();
-
-            available  = $container.height() - (header + footer);
+            available  = $container.height() - ($container.height() * .15);
 
             $img   = $('#lightbox-container img');
             width  = $img.width();
@@ -127,20 +152,20 @@
             return false;
         },
         handleClose: function () {
-            if(methods.isMobile()) {
-                $('#lightbox-container').hide();
-            } else {
-                $('#lightbox-container').fadeOut();
-            }
+            $('#lightbox-container').remove();
         },
         toggleCaption: function () {
-            var $caption = $('#lightbox-container #lightbox-footer');
+            var $caption = $('#lightbox-footer');
 
             if($caption.css('display') == 'none') {
                 $caption.fadeIn();
             } else {
                 $caption.fadeOut();
             }
+        },
+        onClick: function ($obj, callback) {
+            $obj.on('click', callback);
+            $obj.on('tap', callback);
         }
     }
 
