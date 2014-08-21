@@ -36,16 +36,10 @@
             var $lightbox = $('#lightbox-container'),
                 $img      = $(this);
 
-            /*
-             * Build the lightbox
-             */
             $('#lightbox-container img').attr('src', $img.attr('src'));
 
             methods.setCaption($img);
 
-            /*
-             * Show the lightbox
-             */
             if(methods.isMobile()) {
                 $lightbox.show();
             } else {
@@ -54,9 +48,6 @@
 
             methods.positionImage();
 
-            /*
-             * Call the metrics callback
-             */
             if(typeof callback === 'function') {
                 callback(this);
             }
