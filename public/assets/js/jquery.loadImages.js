@@ -1,8 +1,9 @@
 (function($) {
-    var count;
-
     $.loadImages = function () {
-        var callback = function() { };
+        var count, callback;
+
+        count    = $('img[tohires="true"]').length;
+        callback = function() { };
 
         if(arguments.length) {
             callback = arguments[0];
@@ -13,7 +14,6 @@
 
             $this = $(this);
             image = new Image();
-            count++;
 
             image.onload = function() {
                 $this.attr('src', this.src);
