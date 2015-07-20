@@ -1,0 +1,14 @@
+# Site settings
+title: Website of Alec Carpenter
+email: gunnar94@me.com
+description: Personal website of Alec Carpenter.
+baseurl: ""
+url: "http://www.aleccarpenter.me"
+
+# Build settings
+markdown: kramdown
+
+
+# SASS settings
+sass:
+    style: :compressed
