@@ -1,3 +1,3 @@
 # My Website
 
-[alecgunnar.com](alecgunnar.com)
+[alecgunnar.com](http://alecgunnar.com)
