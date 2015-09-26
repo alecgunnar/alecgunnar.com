@@ -1,0 +1,80 @@
+html {
+    font-family: $font-family;
+    font-size: $font-size;
+    height: 100%;
+}
+
+body {
+    background: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: $padding;
+}
+
+.wrapper {
+    background-color: $light-gray;
+    width: 100%;
+    padding: $padding * 2 $padding / 4;
+    box-sizing: border-box;
+    opacity: .9;
+}
+
+.header__picture {
+    background-image: url('../images/me.jpg');
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: -2.75rem -1rem;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+    content: " ";
+    display: block;
+    border-radius: 3rem;
+}
+
+.header__name {
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0;
+}
+
+.header__navigation {
+    text-align: center;
+    margin: $margin * 2 0;
+    padding: 0;
+}
+
+.header__navigation__link {
+    font-size: 1.45rem;
+    text-transform: lowercase;
+    list-style: none;
+    display: inline;
+    margin-left: $margin;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+a {
+    color: $anchor-color;
+
+    &:hover {
+        color: $anchor-hover-color;
+        text-decoration: underline;
+    }
+}
+
+p {
+    font-size: 1.45rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 $padding * 4;
+    margin: 0;
+}
+
+@media screen and (min-width: 375px) {
+    .header__navigation {
+        clear: none;
+    }
+}

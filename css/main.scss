@@ -1,5 +1,27 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
+
+// Fonts
+$font-family: "Helvetica Neue";
+$font-size: 16px;
+
+// Sizing and Spacing
+$wrapper-width: 800px;
+
+$padding: 10px;
+$margin: $padding;
+
+// Colors
+$white: #FFF;
+$black: #000;
+$light-gray: #EFEFEF;
+
+$background-color: $white;
+
+$text-color: $black;
+
+$anchor-color: #428BCA;
+$anchor-hover-color: darken($anchor-color, 10%);
+
 @import "base";
