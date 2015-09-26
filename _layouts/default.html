@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+    {% include head.html %}
 
-  <body>
+    <body>
 
-    <div class="wrapper">
-      <header class="header">
-        <h1 class="header__name"><span class="header__picture"></span>Alec Carpenter</h1>
-        <ul class="header__navigation">
-          <li class="header__navigation__link"><a href="https://www.github.com/gunnar94">Projects</a></li>
-          <li class="header__navigation__link"><a href="mailto:gunnar94@me.com">Contact</a></li>
-        </ul>
-      </header>
+        <div class="wrapper">
 
-      {{ content }}
-    </div>
+            {{ content }}
 
-  </body>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="{{ "js/global.js" | prepend: site.baseurl }}"></script>
+
+    </body>
 
 </html>

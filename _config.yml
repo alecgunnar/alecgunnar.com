@@ -2,8 +2,8 @@
 title: Website of Alec Carpenter
 email: gunnar94@me.com
 description: Personal website of Alec Carpenter.
-baseurl: ""
-url: "http://www.aleccarpenter.me"
+baseurl: "/"
+url: "http://www.alecgunnar.com"
 
 # Build settings
 markdown: kramdown

@@ -7,21 +7,21 @@ $font-family: "Helvetica Neue";
 $font-size: 16px;
 
 // Sizing and Spacing
-$wrapper-width: 800px;
+$wrapper-width: 960px;
 
 $padding: 10px;
-$margin: $padding;
+$margin: 20px;
 
 // Colors
 $white: #FFF;
 $black: #000;
-$light-gray: #EFEFEF;
 
-$background-color: $white;
+$background-color: #426E86;
+$header-color: #FEF1E5;
 
-$text-color: $black;
+$text-color: #666;
 
-$anchor-color: #428BCA;
+$anchor-color: #2F3131;
 $anchor-hover-color: darken($anchor-color, 10%);
 
 @import "base";
