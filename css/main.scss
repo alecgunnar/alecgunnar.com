@@ -1,9 +1,9 @@
 ---
 ---
-@charset "utf-8";
+@charset 'utf-8';
 
 // Fonts
-$font-family: "Helvetica Neue";
+$font-family: 'Helvetica';
 $font-size: 16px;
 
 // Sizing and Spacing
@@ -24,4 +24,4 @@ $text-color: #666;
 $anchor-color: #2F3131;
 $anchor-hover-color: darken($anchor-color, 10%);
 
-@import "base";
+@import 'base';
