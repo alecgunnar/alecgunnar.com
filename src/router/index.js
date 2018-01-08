@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Introduction from '@/components/Introduction'
 
 Vue.use(Router)
 
@@ -8,8 +8,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld,
+      name: 'introduction',
+      component: Introduction,
       meta: {
         title: 'Hello, world.'
       }
