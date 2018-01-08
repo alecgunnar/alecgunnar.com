@@ -8,7 +8,6 @@ node {
     }
 
     stage('Build') {
-        sh 'sed -i "s/DEVELOPMENT/$BUILD_NUMBER/g" src/version.js'
         sh 'npm run build'
     }
 }
