@@ -12,8 +12,8 @@ node {
     }
 
     stage('Deploy') {
-      withCredentials([string(credentialsId: 'ALECGUNNAR_DEPLOY_USER', variable: 'USER')]) {
-          sh 'rsync -r --delete dist/ $USER@107.170.0.205:/var/www/public_html/alecgunnar.com'
-      }
+        withCredentials([string(credentialsId: 'ALECGUNNAR_DEPLOY_USER', variable: 'USER')]) {
+            sh 'rsync -r --delete dist/ $USER@107.170.0.205:/var/www/public_html/alecgunnar.com'
+        }
     }
 }
