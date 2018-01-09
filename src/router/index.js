@@ -11,7 +11,7 @@ const router = new Router({
       name: 'introduction',
       component: Introduction,
       meta: {
-        title: 'Hello, world.'
+        title: 'Introduction - Alec Carpenter'
       }
     }
   ]
