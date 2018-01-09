@@ -68,9 +68,13 @@ export default {
     margin: 0 0 20px;
   }
 
+  .about,
+  footer {
+    padding: 0 20px 0;
+  }
+
   .about {
     text-align: justify;
-    padding: 0 20px 0;
 
     p:first-of-type {
       margin-top: 0;
@@ -98,7 +102,8 @@ export default {
       padding: 20px;
     }
 
-    .about {
+    .about,
+    footer {
       padding: 0;
     }
   }
