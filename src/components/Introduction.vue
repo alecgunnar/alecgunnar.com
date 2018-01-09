@@ -9,8 +9,11 @@
       <div class="me__position"><a href="https://en.wikipedia.org/wiki/Software_engineer">Software Engineer</a> @ <a href="https://www.ford.com/">Ford Motor Company</a></div>
     </header>
     <section class="about">
-      <p>I am an avid programmer, driver, traveler, and more&hellip; From time to time I push code to <a href="https://github.com/alecgunnar">GitHub</a> or go <a href="https://www.nps.gov/zion/index.htm">somewhere interesting</a>.</p>
+      <p>I am an avid programmer, driver, traveler, and more&hellip; On occasion I push code to <a href="https://github.com/alecgunnar">GitHub</a> or go <a href="https://www.nps.gov/zion/index.htm">somewhere interesting</a>.</p>
     </section>
+    <footer>
+      <a href="https://www.linkedin.com/in/aleccarpenter">LinkedIn Profile &rarr;</a>
+    </footer>
   </div>
 </template>
 
@@ -76,6 +79,11 @@ export default {
     p:last-of-type {
       margin-bottom: 0;
     }
+  }
+
+  footer {
+    text-align: right;
+    margin: 20px 0 0;
   }
 
   @media only screen and (min-width: 550px) {
