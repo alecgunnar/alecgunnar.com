@@ -4,7 +4,9 @@
       <div class="portrait__description">Zion National Park, Utah, U.S.A.</div>
     </section>
     <header class="me">
-      <div class="me__photo"></div>
+      <div class="me__photoFrame">
+        <div class="me__photo"></div>
+      </div>
       <h1 class="me__name">Alec Carpenter</h1>
       <div class="me__position"><a href="https://en.wikipedia.org/wiki/Software_engineer">Software Engineer</a> @ <a href="https://www.ford.com/">Ford Motor Company</a></div>
     </header>
@@ -40,16 +42,26 @@ export default {
     margin: -25% 0 0;
   }
 
+  .me__photoFrame,
+  .me__photo {
+    border-radius: 100%;
+  }
+
+  .me__photoFrame {
+    background-color: darken(#FFF, 5%);
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
   .me__photo {
     background-image: url("../assets/images/me.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100%;
-    border: 10px solid darken(#FFF, 5%);
-    border-radius: 100%;
-    width: 50%;
-    padding-bottom: 50%;
-    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 100%;
   }
 
   .me__name,
