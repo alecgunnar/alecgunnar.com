@@ -58,8 +58,8 @@ export default {
   .me__photo {
     background-image: url("../assets/images/me.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 100%;
+    background-position: -40px center;
+    background-size: 135%;
     width: 100%;
     padding-bottom: 100%;
   }
