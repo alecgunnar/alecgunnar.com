@@ -11,11 +11,8 @@
       <div class="me__position"><a href="https://en.wikipedia.org/wiki/Software_engineer">Software Engineer</a> @ <a href="https://www.ford.com/">Ford Motor Company</a></div>
     </header>
     <section class="about">
-      <p>I am an avid programmer, driver, traveler, and more&hellip; On occasion I push code to <a href="https://github.com/alecgunnar">GitHub</a> or go <a href="https://www.nps.gov/zion/index.htm">somewhere interesting</a>.</p>
+      <p>I am an avid programmer, driver, traveler, and more&hellip; On occasion I push code to <a href="https://github.com/alecgunnar">GitHub</a> or go <a href="https://www.nps.gov/zion/index.htm">somewhere interesting</a>. My <a href="/static/documents/resume.pdf">résumé</a> is available to learn more.</p>
     </section>
-    <footer>
-      <a href="https://www.linkedin.com/in/aleccarpenter">LinkedIn Profile &rarr;</a>
-    </footer>
   </div>
 </template>
 
@@ -80,8 +77,7 @@ export default {
     margin: 0 0 20px;
   }
 
-  .about,
-  footer {
+  .about {
     padding: 0 20px 0;
   }
 
@@ -97,11 +93,6 @@ export default {
     }
   }
 
-  footer {
-    text-align: right;
-    margin: 20px 0 0;
-  }
-
   @media only screen and (min-width: 550px) {
     body {
       background-color: darken(#FFF, 5%);
@@ -114,8 +105,7 @@ export default {
       padding: 20px;
     }
 
-    .about,
-    footer {
+    .about {
       padding: 0;
     }
   }
