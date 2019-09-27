@@ -101,7 +101,6 @@ export default {
     .introduction {
       background-color: #FFF;
       width: 300px;
-      margin: 100px auto 0;
       padding: 20px;
     }
 
