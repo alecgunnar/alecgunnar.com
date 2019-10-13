@@ -8,10 +8,10 @@
         <div class="me__photo"></div>
       </div>
       <h1 class="me__name">Alec Carpenter</h1>
-      <div class="me__position"><a href="https://en.wikipedia.org/wiki/Software_engineer">Software Engineer</a> @ <a href="https://www.ford.com/">Ford Motor Company</a></div>
+      <div class="me__position">Java Developer @ HomeAdvisor</div>
     </header>
     <section class="about">
-      <p>I am an avid programmer, driver, traveler, and more&hellip; On occasion I push code to <a href="https://github.com/alecgunnar">GitHub</a> or go <a href="https://www.nps.gov/zion/index.htm">somewhere interesting</a>. My <a href="/static/documents/resume.pdf">résumé</a> is available to learn more.</p>
+      <p>I am an avid fisherman, driver, traveler, and more. On occasion I push code to <a href="https://github.com/alecgunnar">GitHub</a>.</p>
     </section>
   </div>
 </template>
@@ -45,7 +45,7 @@ export default {
   }
 
   .me__photoFrame {
-    background-color: darken(#FFF, 5%);
+    background-color: #FFF;
     width: 50%;
     padding: 10px;
     margin: 0 auto;
@@ -79,10 +79,6 @@ export default {
 
   .about {
     padding: 0 20px 0;
-  }
-
-  .about {
-    text-align: justify;
 
     p:first-of-type {
       margin-top: 0;
