@@ -12,19 +12,19 @@ node {
     }
 
     stage('Deploy') {
-        environment {
-            DEPLOY_CREDS = credentials('gunnar-server-deploy-creds')
-            DEPLOY_SERVER = credentials('gunnar-server-address')
-            DEPLOY_PATH = credentials('alecgunnar-site-location')
+        withCredentials([
+            string(credentialsId: 'gunnar-server-address', variable: 'serverAddress'),
+            string(credentialsId: 'alecgunnar-site-location', variable: 'deployPath'),
+            usernamePassword(credentialsId: 'gunnar-server-deploy-creds', usernameVariable: 'username', passwordVariable: 'password')
+        ]) {
+            def remote = [:]
+            remote.name = "gunnar-server"
+            remote.host = serverAddress
+            remote.user = username
+            remote.password = password
+            remote.allowAnyHosts = true
+
+            sshPut remote: remote, from: 'dist', into: deployPath
         }
-
-        def remote = [:]
-        remote.name = "gunnar-server"
-        remote.host = DEPLOY_SERVER
-        remote.user = DEPLOY_CREDS_USR
-        remote.password = DEPLOY_CREDS_PSW
-        remote.allowAnyHosts = true
-
-        sshPut remote: remote, from: 'dist', into: DEPLOY_PATH
     }
 }
