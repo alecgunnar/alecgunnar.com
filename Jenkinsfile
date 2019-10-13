@@ -1,4 +1,10 @@
-node {
+pipeline {
+    env {
+        DEPLOY_CREDS = credentials('gunnar-server-deploy-creds')
+        DEPLOY_SERVER = credentials('gunnar-server-address')
+        DEPLOY_PATH = credentials('alecgunnar-site-location')
+    }
+
     stage('Checkout') {
         checkout scm
     }
@@ -12,12 +18,6 @@ node {
     }
 
     stage('Deploy') {
-        env {
-            DEPLOY_CREDS = credentials('gunnar-server-deploy-creds')
-            DEPLOY_SERVER = credentials('gunnar-server-address')
-            DEPLOY_PATH = credentials('alecgunnar-site-location')
-        }
-
         def remote = [:]
         remote.name = "gunnar-server"
         remote.host = DEPLOY_SERVER
