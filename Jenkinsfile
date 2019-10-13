@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    env {
+    environment {
         DEPLOY_CREDS = credentials('gunnar-server-deploy-creds')
         DEPLOY_SERVER = credentials('gunnar-server-address')
         DEPLOY_PATH = credentials('alecgunnar-site-location')
