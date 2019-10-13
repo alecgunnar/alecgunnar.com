@@ -24,7 +24,7 @@ node {
             remote.password = password
             remote.allowAnyHosts = true
 
-            sshPut remote: remote, from: 'dist', into: deployPath
+            sshPut remote: remote, from: 'dist', into: 'preview.aleccarpenter.com'
         }
     }
 }
