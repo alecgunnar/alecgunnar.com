@@ -23,6 +23,7 @@ node {
         remote.host = DEPLOY_SERVER
         remote.user = DEPLOY_CREDS_USR
         remote.password = DEPLOY_CREDS_PSW
+        remote.allowAnyHosts = true
 
         sshPut remote: remote, from: 'dist', into: DEPLOY_PATH
     }
