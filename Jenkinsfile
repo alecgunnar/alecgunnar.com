@@ -7,13 +7,6 @@ pipeline {
         DEPLOY_PATH = credentials('alecgunnar-site-location')
     }
 
-    def remote = [:]
-    remote.name = "gunnar-server"
-    remote.host = DEPLOY_SERVER
-    remote.user = DEPLOY_CREDS_USR
-    remote.password = DEPLOY_CREDS_PSW
-    remote.allowAnyHosts = true
-
     stages {
         stage('Checkout') {
             steps {
@@ -35,6 +28,15 @@ pipeline {
 
         stage('Deploy') {
             steps {
+                script {
+                    def remote = [:]
+                    remote.name = "gunnar-server"
+                    remote.host = DEPLOY_SERVER
+                    remote.user = DEPLOY_CREDS_USR
+                    remote.password = DEPLOY_CREDS_PSW
+                    remote.allowAnyHosts = true
+                }
+
                 sshPut remote: remote, from: 'dist', into: DEPLOY_PATH
             }
         }
