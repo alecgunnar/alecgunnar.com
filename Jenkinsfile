@@ -14,6 +14,7 @@ node {
     stage('Deploy') {
         withCredentials([
             string(credentialsId: 'gunnar-server-address', variable: 'serverAddress'),
+            string(credentialsId: 'alecgunnar-site-location', variable: 'deployPath'),
             usernamePassword(credentialsId: 'gunnar-server-deploy-creds', usernameVariable: 'username', passwordVariable: 'password')
         ]) {
             def remote = [:]
@@ -23,7 +24,7 @@ node {
             remote.password = password
             remote.allowAnyHosts = true
 
-            sshPut remote: remote, from: 'dist/.', into: 'preview.aleccarpenter.com'
+            sshPut remote: remote, from: 'dist', into: 'preview.aleccarpenter.com'
         }
     }
 }
