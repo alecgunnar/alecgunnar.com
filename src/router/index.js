@@ -9,17 +9,9 @@ const router = new Router({
     {
       path: '/',
       name: 'introduction',
-      component: Introduction,
-      meta: {
-        title: 'Introduction - Alec Carpenter'
-      }
+      component: Introduction
     }
   ]
-})
-
-router.beforeEach((to, from, next) => {
-  document.title = to.meta.title
-  next()
 })
 
 export default router
