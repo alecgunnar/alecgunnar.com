@@ -1,7 +1,7 @@
 <template>
   <div class="introduction">
     <section class="portrait">
-      <div class="portrait__description">Looking north across Georgetown Lake in Georgetown, Colorado, U.S.A.</div>
+      <div class="portrait__description">Delicate Arch in Arches National Park, Moab, Utah, U.S.A.</div>
     </section>
     <header class="me">
       <div class="me__photoFrame">
@@ -25,7 +25,7 @@ export default {
 <style lang="scss">
   .portrait {
     background-color: #000;
-    background-image: url("../assets/images/georgetown_lake.jpg");
+    background-image: url("../assets/images/delicate_arch.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     padding-bottom: 75%;
