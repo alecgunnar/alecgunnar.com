@@ -68,7 +68,7 @@ export default {
 
   .me__name {
     font-size: 1.75rem;
-    margin: 20px 0 0;
+    margin: 10px 0 0;
     padding: 0;
   }
 
