@@ -8,7 +8,7 @@
         <div class="me__photo"></div>
       </div>
       <h1 class="me__name">Alec Carpenter</h1>
-      <div class="me__position">Starting a new role soon&hellip;</div>
+      <div class="me__position">Software Engineer @ General Motors</div>
     </header>
     <section class="about">
       <p>I am an avid fisherman, driver, traveler, and more. On occasion I push code to <a href="https://github.com/alecgunnar">GitHub</a>.</p>
