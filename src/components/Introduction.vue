@@ -11,7 +11,11 @@
       <div class="me__position">SDE @ Amazon</div>
     </header>
     <section class="about">
-      <p>I am an avid fisherman, driver, traveler, and more. On occasion I push code to <a href="https://github.com/alecgunnar">GitHub</a>.</p>
+      <p>Fisherman, programmer, traveler, and more&hellip;</p>
+      <ul class="socials">
+        <li><a href="https://www.linkedin.com/in/aleccarpenter/" class="linkedIn">LinkedIn Profile</a></li>
+        <li><a href="https://github.com/alecgunnar" class="gitHub">GitHub Projects</a></li>
+      </ul>
     </section>
   </div>
 </template>
@@ -89,6 +93,35 @@ export default {
     }
   }
 
+  .socials {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0;
+
+    li {
+      display: inline;
+    }
+
+    a {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-indent: -99999px;
+      display: inline-block;
+      width: 56px;
+      height: 48px;
+
+      &.gitHub {
+        background-image: url('../assets/images/social_icons/gitHub.png');
+      }
+
+      &.linkedIn {
+        background-image: url('../assets/images/social_icons/linkedIn.png');
+      }
+    }
+  }
+
   @media only screen and (min-width: 550px) {
     body {
       background-color: darken(#FFF, 5%);
@@ -102,6 +135,11 @@ export default {
 
     .about {
       padding: 0;
+    }
+
+    .socials a {
+      width: 40px;
+      height: 32px;
     }
   }
 </style>
