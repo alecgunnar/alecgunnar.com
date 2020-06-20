@@ -82,6 +82,7 @@ export default {
   }
 
   .about {
+    text-align: center;
     padding: 0 20px 0;
 
     p:first-of-type {
@@ -94,7 +95,6 @@ export default {
   }
 
   .socials {
-    text-align: center;
     list-style: none;
     padding: 0;
     margin: 30px 0 0;
