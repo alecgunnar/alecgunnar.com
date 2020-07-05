@@ -29,7 +29,7 @@ export default {
 <style lang="scss">
   .portrait {
     background-color: #000;
-    background-image: url("../assets/images/delicate_arch.jpg");
+    background-image: url("../assets/images/rmnp_fishing_longs_peak.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     padding-bottom: 75%;
