@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Alec Carpenter</title>
     <style>
-      html {
-        font-size: 18px;
-      }
-
       body {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        font-size: 10px;
         margin: 0;
       }
 
@@ -62,17 +59,18 @@
       }
 
       .me__name {
-        font-size: 1.75rem;
+        font-size: 3em;
         margin: 10px 0 0;
         padding: 0;
       }
 
       .me__position {
-        font-size: .75rem;
+        font-size: 2em;
         margin: 0 0 20px;
       }
 
       .about {
+        font-size: 2em;
         text-align: center;
         padding: 0 20px 0;
       }
@@ -116,6 +114,14 @@
       @media only screen and (min-width: 550px) {
         body {
           background-color: #F2F2F2;
+          font-size: 7px;
+        }
+
+        #app {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
         }
 
         .introduction {
@@ -131,13 +137,6 @@
         .socials a {
           width: 40px;
           height: 32px;
-        }
-
-        #app {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100vh;
         }
       }
     </style>
