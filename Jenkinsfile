@@ -10,7 +10,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        echo '${localhost}'
+        echo "${localhost}"
       }
     }
   }
