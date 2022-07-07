@@ -10,7 +10,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        sh('ls ./build')
+        echo '${localhost}'
       }
     }
   }
