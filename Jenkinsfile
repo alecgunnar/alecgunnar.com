@@ -2,17 +2,15 @@ pipeline {
   agent any
 
   stages {
-    stage('Checkout') {
+    stage('Build') {
       steps {
-        echo 'Git Checkout'
-        sh('ls')
+        sh('./bin/build')
       }
     }
 
     stage('Deploy') {
       steps {
-        echo 'Testing...1...2...3...4'
-        sh('ls')
+        sh('ls ./build')
       }
     }
   }

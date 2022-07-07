@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Deleting old artifacts"
+rm -rf ./build
+
+echo "Creating build dir"
+mkdir ./build
+
+echo "Copying site files"
+cp -R ./assets ./build
+cp -R ./index.html ./build
