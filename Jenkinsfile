@@ -13,18 +13,24 @@ pipeline {
       }
     }
 
-    stage('Sanity Check') {
+    stage('Verify Build') {
       steps {
         sh('ls -l')
-        sh('curl -v https://${ALECGUNNAR_HOSTNAME}')
       }
     }
 
     stage('Deploy') {
       steps {
         withCredentials([sshUserPrivateKey(credentialsId: 'alecgunnar-user-key', keyFileVariable: 'PK', usernameVariable: 'USERNAME')]) {
-          sh 'scp -o StrictHostKeyChecking=no -i $PK -r build/* ${USERNAME}@${ALECGUNNAR_HOSTNAME}:${ALECGUNNAR_CONTENT_PATH}'
+          sh 'scp -o StrictHostKeyChecking=no -i $PK -r build/ ${USERNAME}@${ALECGUNNAR_HOSTNAME}:${ALECGUNNAR_CONTENT_PATH}'
         }
+      }
+    }
+
+    stage('Verify Deploy') {
+      steps {
+        sh('ls -l')
+        sh('curl -v https://${ALECGUNNAR_HOSTNAME}')
       }
     }
   }
