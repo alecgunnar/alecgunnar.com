@@ -29,7 +29,6 @@ pipeline {
 
     stage('Verify Deploy') {
       steps {
-        sh('ls -l')
         sh('curl -v https://${ALECGUNNAR_HOSTNAME}')
       }
     }
