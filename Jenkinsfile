@@ -16,6 +16,7 @@ pipeline {
     stage('Sanity Check') {
       steps {
         sh('ls -l')
+        sh('curl -v https://${ALECGUNNAR_HOSTNAME}')
       }
     }
 
