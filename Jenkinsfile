@@ -32,5 +32,13 @@ pipeline {
         sh('curl -v https://${ALECGUNNAR_HOSTNAME}')
       }
     }
+
+    stage('Push to GitHub') {
+      steps {
+        withCredentials([sshUserPrivateKey(credentialsId: 'github', keyFileVariable: 'PK', usernameVariable: 'USERNAME')]) {
+          sh('GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -i $PK" git push -u git@github.com:${USERNAME}/alecgunnar.com.git HEAD:master')
+        }
+      }
+    }
   }
 }
